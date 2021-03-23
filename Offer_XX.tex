@@ -1,0 +1,136 @@
+% ===========================================================================================================================
+% Includes
+% ===========================================================================================================================
+\include{includes}
+\include{config}
+\include{structure}
+
+% ===========================================================================================================================
+\begin{document}
+% ---------------------------------------------------------------------------------------------------------------------------
+% Sender
+% ---------------------------------------------------------------------------------------------------------------------------
+\hfill
+\begin{minipage}{0.5\textwidth}
+	\begin{large}
+		\begin{flushright}
+			\textbf{\Sender} \\ \vspace*{5pt}
+			\Street \\
+			\City \\
+			\Country \\
+			Tel.: \Phone \\
+			Mail: \Mail
+		\end{flushright}
+	\end{large}
+\end{minipage}
+\vspace*{22pt}
+
+\begin{minipage}{\textwidth}
+	\begin{small} \underline{\Sender, \Street, \City, \Country}  \end{small}
+\end{minipage}
+\vspace*{16pt}
+
+% ---------------------------------------------------------------------------------------------------------------------------
+% Receiver
+% ---------------------------------------------------------------------------------------------------------------------------
+\begin{minipage}{0.5\textwidth}
+	\begin{large}
+		\Company\\ 
+		attn.  Ms. \Companyperson\\ \ \\
+		\Companyaddress 
+	\end{large}
+\end{minipage}
+\vspace*{33pt}
+
+% ---------------------------------------------------------------------------------------------------------------------------
+% Offer Meta-Data
+\begin{minipage}{\textwidth}
+	\begin{tabularx}{\textwidth}{X X X}
+		Your Customer Reference:			& Your Offer-ID:			& 	Date: 	 		\\
+		\large \Customer					& \large \Offer 			&	\large \CreateDate		\\
+	\end{tabularx}
+\end{minipage}
+\vspace*{11pt}
+
+\begin{minipage}{\textwidth}
+	\textbf{\Subject}
+\end{minipage}
+\vspace*{22pt}
+
+
+% ---------------------------------------------------------------------------------------------------------------------------
+% Letter
+% ---------------------------------------------------------------------------------------------------------------------------
+\begin{minipage}{\textwidth}
+Dear Ladies and Gentlemen, \\ 
+
+It is with great pleasure that I take the liberty of submitting the offer for the provision of services regarding \Subject. \\
+
+Best Regards\\
+\vspace*{33pt}
+
+Anlage: Offer Elaboration
+\end{minipage}
+
+\newpage
+% ---------------------------------------------------------------------------------------------------------------------------
+% Detailed Offer
+% ---------------------------------------------------------------------------------------------------------------------------
+
+% ------------------------------------------------------------
+% We'Ll need to define new column types
+\newcolumntype{b}{X}
+\newcolumntype{s}{>{\hsize=.45\hsize}X}
+\newcommand{\ts}{\vspace{5pt}}
+% ------------------------------------------------------------
+
+% ---------------------------------------------------------------------------------------------------------------------------
+% Offer Meta-Data
+\begin{Large} \textbf{Your Data}: \end{Large} \\ \vspace*{11pt}
+\begin{tabularx}{\textwidth}{b s s s}
+	Your Reference		& \Customer 		& Date 				& \CreateDate 	\\
+	Your Offer-ID.		& \Offer 			& Valid until 		& 30.06.2021	\\
+\end{tabularx}
+\vspace*{22pt}
+
+
+% ---------------------------------------------------------------------------------------------------------------------------
+% Offer Positions
+\begin{Large} \textbf{Your Offer}: \end{Large} \\ \vspace*{11pt}
+\begin{tabularx}{\textwidth}{s	b	s	s	s	s}
+	\hline 	
+	Offer-Pos. 	& Description 											& Amount & Unit 			& Unit Price  & Total Price	\\
+	\hline \\
+
+	\multicolumn{6}{l}{\textbf{Position 1}}\\ 
+	110 		&	Fancy Engineering	 	 					& 	3 	& Std 				& \Stdlohn	& 540 \euro{}\\
+	120 		& 	More Fancy Engineering  					& 	3 	& Std 				& \Stdlohn 	& 540 \euro{}\\
+	130			&	Project Management							&	2	& Std 				& \Stdlohn 	& 360 \euro{}\\ \hline
+	\multicolumn{5}{l}{Subtotal Position 1} 					& 1440,00 \euro{} \\ \hline \\ 
+	
+	\multicolumn{6}{l}{\textbf{Position 2}}\\ 
+	210 		&	Fancy Engineering	 	 					& 	3 	& Std 				& \Stdlohn 	& 540,00 \euro{}\\
+	220 		& 	Risk Management  							& 	1	& Std 				& \Stdlohn 	& 180,00 \euro{}\\
+	230			&	Documentation								&	2	& Std 				& \Stdlohn 	& 360,00 \euro{}\\ \hline
+	\multicolumn{5}{l}{Subtotal Position 2} 					& 3.060,00 \euro{} \\ \hline \\
+
+	\multicolumn{6}{l}{\textbf{Position 3}}\\
+	310 		&	Project Management							& 	8 	& Std 				& \Stdlohn 	& 1.440,00 \euro{}\\ 
+	320 		& 	Ending							  			& 	12	& Std 				& \Stdlohn 	& 2.160,00 \euro{}\\ \hline
+	\multicolumn{5}{l}{Subtotal Position 3:} 					& 3.600,00 \euro{} \\ \hline \\ \\	 
+\end{tabularx}
+\vspace*{22pt}
+\noindent \normalsize All prices are exclusive of VAT, unless otherwise stated!
+
+\begin{Large} \textbf{Summary}: \end{Large} \\ \vspace*{11pt}
+% ---------------------------------------------------------------------------------------------------------------------------
+% Angebotzusammenfassung
+\begin{tabularx}{\textwidth}{X	X	X}
+	\hline Net Amount (Total)  	& 	VAT (19\%)	 		& 	Gross Amount (Total)\\
+	\hline 
+	 8.100,00 \euro{} 			& 1.539,00 \euro 		& 	9.6390,00 \euro{} \\
+	\hline 
+	\hline 	
+\end{tabularx}
+
+\end{document}

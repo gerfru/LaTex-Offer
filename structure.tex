@@ -1,0 +1,45 @@
+% ===========================================================================================================================
+% Weitere Footer
+% ===========================================================================================================================
+% ---------------------------------------------------------------------------------------------------------------------------
+% Initialisierung
+\pagestyle{fancy}
+\fancyhf{}
+
+% ---------------------------------------------------------------------------------------------------------------------------
+% Löschen des Strichs im Header
+\renewcommand{\headrulewidth}{0pt}
+
+% ---------------------------------------------------------------------------------------------------------------------------
+% Setzen des Footers
+\lfoot{\footnotesize	
+	\begin{tabular}[t]{l@{}}
+		\multicolumn{1}{@{}l@{}}{Name:}\\ 
+		\Sender \\
+		\Street , \City \\
+		Tel.: \Phone \\
+		Mail: \Mail \\
+	\end{tabular}
+}
+
+\cfoot{\footnotesize	
+	\begin{tabular}[t]{l@{}}
+		\multicolumn{1}{@{}l@{}}{}\\ %RLegal Information:}\\
+		Page \thepage{} of \pageref{LastPage} \\ 
+	   	%Jurisdiction XYZ\\
+	   	%Jurisdiction Number: GFR 123456\\ \\
+	   
+	   	%CEO: Nicola Tesla\\		
+	   	%UID-Nr.: DE1234567890\\
+	\end{tabular}
+}
+	
+
+\rfoot{\footnotesize	
+	\begin{tabular}[t]{l@{}}
+		\multicolumn{1}{@{}l@{}}{Accounting Details:}\\ 
+		\Bankname \\
+		BIC: \BIC \\
+		IBAN: \IBAN
+	\end{tabular} 
+}
